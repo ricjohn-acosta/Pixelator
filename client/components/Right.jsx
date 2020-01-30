@@ -11,9 +11,9 @@ const Right = (props) => {
     <>
     <h1>Art Gallery</h1>
     <div>
-      <Route exact path="/" component={ GalleryFive } />
+      <Route path="/" component={ GalleryFive } />
       <Route path="/gal5" component={ GalleryFiveArts } />
-      <Route exact path="/" component={ GalleryEight } />
+      <Route path="/" component={ GalleryEight } />
       <Route path="/gal8" component={ GalleryEightArts } />
       {console.log('Main Right')}
     </div>
