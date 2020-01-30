@@ -35,14 +35,22 @@ clickHandlerY = () => {
 }
 
 render () {
+  const { size } = this.props.match.params
+  this.displayBox = {
+    margin: 'auto',
+    maxWidth: Math.sqrt(this.props.match.params.size) * 52,
+    maxHeight: '60px'
+  }
+  console.log(size)
+
   let boxArr = []
-  for (var i = 0; i < 64; i++) {
+  for (var i = 0; i < size; i++) {
     boxArr.push(<Pixel id={i} key={i} color={this.state.color}/>)
   }
 
   return (
     <>
-    <div className="display-box">
+    <div style={this.displayBox}>
       {boxArr}
     </div>
     <div>
