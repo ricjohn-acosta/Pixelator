@@ -16,8 +16,6 @@ const App = () => {
       <div><Route path="/" component={ Left } /></div>
       <div className="main-screen-max">
         <Route path="/:size" component={ Main }/>
-        {/* <Route exact path="/:size" component={ Main5 }/>
-        <Route exact path="/:size" component={ Main10 }/> */}
       </div>
       <div><Route path="/" component= { Right }/></div>
     </div>

@@ -1,9 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
+
+import GallerySavedArts from './GallerySavedArts'
+import GallerySaved from './GallerySaved'
 
 const Left = (props) => {
   return (
     <>
+    <h1>My Saved Images</h1>
+    <div>
+      <Link to="/galSavedArts">Show Saved Art</Link>
+      <Route path="/galSavedArts" component={ GallerySavedArts } />
+      {console.log('Main ')}
+    </div>
       <h1>Select grid size:</h1>
       <div>
         <h3>
