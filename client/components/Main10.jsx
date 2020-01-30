@@ -2,7 +2,7 @@ import React from 'react'
 import Pixel from './Pixel.jsx'
 import { Link } from 'react-router-dom'
 
-class Main extends React.Component {
+class Main10 extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -36,13 +36,13 @@ clickHandlerY = () => {
 
 render () {
   let boxArr = []
-  for (var i = 0; i < 64; i++) {
+  for (var i = 0; i < 100; i++) {
     boxArr.push(<Pixel id={i} key={i} color={this.state.color}/>)
   }
 
   return (
     <>
-    <div className="display-box">
+    <div className="display-box10">
       {boxArr}
     </div>
     <div>
@@ -62,4 +62,4 @@ render () {
 }
 }
 
-export default Main
+export default Main10
