@@ -8,12 +8,14 @@ class Pixel extends React.Component {
         id: props.id,
         width: '50px',
         height: '50px',
-        backgroundColor: 'blue',
+        backgroundColor: 'white',
         display: 'block',
         float: 'left',
         overflow: 'hidden',
         margin: '0',
-        padding: '0'
+        padding: '0',
+        borderStyle: 'solid',
+        borderWidth: '1px'
       }
     }
   }
@@ -23,10 +25,12 @@ class Pixel extends React.Component {
       style: {
         width: '50px',
         height: '50px',
-        backgroundColor: 'blue',
+        backgroundColor: 'white',
         display: 'block',
         overflow: 'hidden',
-        float: 'left'
+        float: 'left',
+        borderStyle: 'solid',
+        borderWidth: '1px'
       }
     })
   }
@@ -38,11 +42,14 @@ class Pixel extends React.Component {
         backgroundColor: this.props.color,
         display: 'block',
         overflow: 'hidden',
-        float: 'left'
+        float: 'left',
+        borderStyle: 'solid',
+        borderWidth: '1px'
 
       }
     })
   }
+
   render () {
     return (
       <div style={this.state.style} onClick={this.mouseClick} onContextMenu={this.resetColor}>  </div>

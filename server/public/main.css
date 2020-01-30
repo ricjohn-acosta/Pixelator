@@ -19,11 +19,33 @@
 
 .display-box {
   margin: auto;
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 420px;
+  max-height: 420px;
+
+}
+
+.display-box5 {
+  margin: auto;
+  max-width: 270px;
+  max-height: 270px;
+
+}
+
+.display-box10 {
+  margin: auto;
+  max-width: 550px;
+  max-height: 550px;
 
 }
 
 .button {
-  position: relative;
+  margin: 20px;
+  text-align: center;
+}
+
+.main-screen-max {
+
+  margin: auto;
+  max-width: 550px;
+
 }
