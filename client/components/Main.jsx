@@ -17,14 +17,18 @@ clickHandler = () => {
 
 render () {
   let boxArr = []
-  for (var i = 0; i < 500; i++) {
+  for (var i = 0; i < 25; i++) {
     boxArr.push(<Pixel id={i} key={i} color={this.state.color}/>)
   }
-  
+
   return (
     <>
-    {boxArr}
-    <button onClick={this.clickHandler}>change colour</button>
+    <div className="display-box">
+      {boxArr}
+    </div>
+    <div>
+      <button onClick={this.clickHandler}>change colour</button>
+    </div>
     </>
   )
 }

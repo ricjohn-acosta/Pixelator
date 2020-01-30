@@ -1,4 +1,4 @@
-/* .main-div {
+.main-div {
 
   display: grid;
   grid-template-columns: 0.7fr 2fr 0.7fr;
@@ -9,4 +9,17 @@
 
   text-align: center;
 
-} */
+}
+
+.pic-sizer {
+
+  max-width: 60px;
+
+}
+
+.display-box {
+  margin: auto;
+  max-width: 500px;
+  max-height: 500px;
+
+}

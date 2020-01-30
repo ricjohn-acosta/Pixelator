@@ -6,19 +6,27 @@ class Pixel extends React.Component {
     this.state = {
       style: {
         id: props.id,
-        width: '50px',
-        height: '50px',
+        width: '100px',
+        height: '100px',
         backgroundColor: 'blue',
-        display: 'inline-block'
+        display: 'block',
+        float: 'left',
+        overflow: 'hidden',
+        margin: '0',
+        padding: '0'
       }
     }
   }
   mouseClick = () => {
     this.setState({
       style: {
-        width: '50px',
-        height: '50px',
-        backgroundColor: this.props.color
+        width: '100px',
+        height: '100px',
+        backgroundColor: this.props.color,
+        display: 'block',
+        overflow: 'hidden',
+        float: 'left'
+
       }
     })
   }
