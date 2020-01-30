@@ -6,8 +6,8 @@ class Pixel extends React.Component {
     this.state = {
       style: {
         id: props.id,
-        width: '100px',
-        height: '100px',
+        width: '50px',
+        height: '50px',
         backgroundColor: 'blue',
         display: 'block',
         float: 'left',
@@ -17,11 +17,24 @@ class Pixel extends React.Component {
       }
     }
   }
+  resetColor = e => {
+    e.preventDefault()
+    this.setState({
+      style: {
+        width: '50px',
+        height: '50px',
+        backgroundColor: 'blue',
+        display: 'block',
+        overflow: 'hidden',
+        float: 'left'
+      }
+    })
+  }
   mouseClick = () => {
     this.setState({
       style: {
-        width: '100px',
-        height: '100px',
+        width: '50px',
+        height: '50px',
         backgroundColor: this.props.color,
         display: 'block',
         overflow: 'hidden',
@@ -32,7 +45,7 @@ class Pixel extends React.Component {
   }
   render () {
     return (
-      <div style={this.state.style} onClick={this.mouseClick}>  </div>
+      <div style={this.state.style} onClick={this.mouseClick} onContextMenu={this.resetColor}>  </div>
     )
   }
 }
