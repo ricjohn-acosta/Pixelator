@@ -3,7 +3,6 @@ import { Link, Route } from 'react-router-dom'
 
 import GallerySavedArts from './GallerySavedArts'
 import GallerySaved from './GallerySaved'
-import { Link } from 'react-router-dom'
 
 const Left = (props) => {
   return (
