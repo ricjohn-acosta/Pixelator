@@ -10,7 +10,7 @@ import Right from './Right'
 const App = () => {
   return (
     <>
-      <h1 className="middle-text">The Pixelator</h1>
+      <h1 className="middle-text heading-text ">The Pixelator</h1>
 
     <div className="main-div">
       <div><Route path="/" component={ Left } /></div>

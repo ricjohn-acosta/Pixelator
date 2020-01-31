@@ -7,7 +7,7 @@ import GallerySaved from './GallerySaved'
 const Left = (props) => {
   return (
     <>
-    <h1>My Saved Images</h1>
+    <h1 class='body-text'>My Saved Images</h1>
     <div>
       <Link to="/galSavedArts">Show Saved Art</Link>
       <Route path="/galSavedArts" component={ GallerySavedArts } />

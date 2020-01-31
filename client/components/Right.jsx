@@ -9,7 +9,7 @@ import GalleryEightArts from './GalleryEightArts'
 const Right = (props) => {
   return (
     <>
-    <h1>Art Gallery</h1>
+    <h1 class='body-text'>Art Gallery</h1>
     <div>
       <Route path="/" component={ GalleryFive } />
       <Route path="/gal5" component={ GalleryFiveArts } />
