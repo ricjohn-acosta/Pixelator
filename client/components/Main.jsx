@@ -12,7 +12,7 @@ class Main extends React.Component {
       display: {
         margin: 'auto',
         maxWidth: '0',
-        maxHeight: '60px'
+        maxHeight: '0'
       }
     }
   }
@@ -83,6 +83,7 @@ render () {
       <button onClick={this.clickHandler} value='green'>Green</button>
       <button onClick={this.clickHandler} value='blue'>Blue</button>
       <button onClick={this.clickHandler} value='yellow'>Yellow</button>
+      <br/>
       <button onClick={this.clickHandler} value='purple'>Purple</button>
       <button onClick={this.clickHandler} value='orange'>Orange</button>
       <button onClick={this.clickHandler} value='violet'>Violet</button>
