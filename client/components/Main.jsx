@@ -6,52 +6,64 @@ class Main extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      color: 'black'
+      pixels: [],
+      color: 'black',
+      number: '0',
+      display: {
+        margin: 'auto',
+        maxWidth: '0',
+        maxHeight: '60px'
+      }
     }
   }
 
-clickHandlerR = () => {
+pixelClick = (id) => {
+  const newPixels = [...this.state.pixels]
+  newPixels[id].color = this.state.color
+  this.setState({ pixels: newPixels })
+}
+
+pixelClear = (id, evt) => {
+  evt.preventDefault()
+  const newPixels = [...this.state.pixels]
+  newPixels[id].color = 'white'
+  this.setState({ pixels: newPixels })
+}
+
+clickHandler = (e) => {
   this.setState({
-    color: 'red'
+    color: e.target.value
   })
 }
 
-clickHandlerG = () => {
+sizeHandler = (e) => {
+  const num = e.target.value
+  let boxArr = []
+  for (var i = 0; i < num; i++) {
+    boxArr.push({
+      id: i,
+      color: 'white'
+    })
+  }
   this.setState({
-    color: 'green'
-  })
-}
-
-clickHandlerB = () => {
-  this.setState({
-    color: 'blue'
-  })
-}
-
-clickHandlerY = () => {
-  this.setState({
-    color: 'yellow'
+    pixels: boxArr,
+    margin: 'auto',
+    number: num,
+    display: {
+      margin: 'auto',
+      maxWidth: Math.sqrt(num) * 52,
+      maxHeight: Math.sqrt(num) * 52
+    }
   })
 }
 
 render () {
-  const { size } = this.props.match.params
-  this.displayBox = {
-    margin: 'auto',
-    maxWidth: Math.sqrt(this.props.match.params.size) * 52,
-    maxHeight: '60px'
-  }
-  console.log(size)
-
-  let boxArr = []
-  for (var i = 0; i < size; i++) {
-    boxArr.push(<Pixel id={i} key={i} color={this.state.color}/>)
-  }
-
   return (
     <>
-    <div style={this.displayBox}>
-      {boxArr}
+    <div style={this.state.display}>
+      {this.state.pixels.map(pixel => (
+        <Pixel id={pixel.id} key={pixel.id} color={pixel.color} onClick={this.pixelClick} onContextMenu={this.pixelClear}/>
+      ))}
     </div>
     <div>
       <h2 className="middle-text">Click to draw pixels!
@@ -60,10 +72,17 @@ render () {
       </h2>
     </div>
     <div className="button">
-      <button onClick={this.clickHandlerR} >Red</button>
-      <button onClick={this.clickHandlerG} >Green</button>
-      <button onClick={this.clickHandlerB} >Blue</button>
-      <button onClick={this.clickHandlerY} >Yellow</button>
+      <button onClick={this.clickHandler} value='black'>Black</button>
+      <button onClick={this.clickHandler} value='red'>Red</button>
+      <button onClick={this.clickHandler} value='green'>Green</button>
+      <button onClick={this.clickHandler} value='blue'>Blue</button>
+      <button onClick={this.clickHandler} value='yellow'>Yellow</button>
+    </div>
+    <div className="grid-size-btn, button" >
+      <button onClick={this.sizeHandler} value="0">Clear All</button>
+      <button onClick={this.sizeHandler} value="25">5x5</button>
+      <button onClick={this.sizeHandler} value="64">8x8</button>
+      <button onClick={this.sizeHandler} value="100">10x10</button>
     </div>
     </>
   )

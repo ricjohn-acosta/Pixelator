@@ -6,7 +6,7 @@ const GalleryEight = (props) => {
     <div>
       <h3>Example 8x8 Pixel Arts</h3>
       {console.log('Gal8')}
-      <Link to="/gal8">See some 8x8 Art!</Link>
+      <Link to="/gal8/arts">See some 8x8 Art!</Link>
     </div>
   )
 }

@@ -34,25 +34,21 @@ class Pixel extends React.Component {
       }
     })
   }
-  mouseClick = () => {
-    this.setState({
-      style: {
-        width: '50px',
-        height: '50px',
-        backgroundColor: this.props.color,
-        display: 'block',
-        overflow: 'hidden',
-        float: 'left',
-        borderStyle: 'solid',
-        borderWidth: '1px'
-
-      }
-    })
-  }
 
   render () {
+    const { id, onClick, onContextMenu } = this.props
+    const style = {
+      width: '50px',
+      height: '50px',
+      backgroundColor: this.props.color,
+      display: 'block',
+      overflow: 'hidden',
+      float: 'left',
+      borderStyle: 'solid',
+      borderWidth: '1px'
+    }
     return (
-      <div style={this.state.style} onClick={this.mouseClick} onContextMenu={this.resetColor}>  </div>
+      <div style={style} onClick={() => onClick(id)} onContextMenu={(evt) => onContextMenu(id, evt)}>  </div>
     )
   }
 }
