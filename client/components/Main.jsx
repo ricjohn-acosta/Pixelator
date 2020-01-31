@@ -7,7 +7,7 @@ class Main extends React.Component {
     super(props)
     this.state = {
       pixels: [],
-      color: 'black',
+      color: 'rgb(0,0,0)',
       number: '0',
       display: {
         margin: 'auto',
@@ -29,6 +29,12 @@ pixelClear = (id, evt) => {
   newPixels[id].color = 'white'
   this.setState({ pixels: newPixels })
 }
+
+// pixelSpray = (id, evt) => {
+//   const newPixels = [...this.state.pixels]
+//   newPixels[id].color = this.state.color
+//   this.setState({ pixels: newPixels })
+// }
 
 clickHandler = (e) => {
   this.setState({
@@ -62,7 +68,7 @@ render () {
     <>
     <div style={this.state.display}>
       {this.state.pixels.map(pixel => (
-        <Pixel id={pixel.id} key={pixel.id} color={pixel.color} onClick={this.pixelClick} onContextMenu={this.pixelClear}/>
+        <Pixel id={pixel.id} key={pixel.id} color={pixel.color} onClick={this.pixelClick} onContextMenu={this.pixelClear} onMouseOver={this.pixelSpray}/>
       ))}
     </div>
     <div>
@@ -77,9 +83,13 @@ render () {
       <button onClick={this.clickHandler} value='green'>Green</button>
       <button onClick={this.clickHandler} value='blue'>Blue</button>
       <button onClick={this.clickHandler} value='yellow'>Yellow</button>
+      <button onClick={this.clickHandler} value='purple'>Purple</button>
+      <button onClick={this.clickHandler} value='orange'>Orange</button>
+      <button onClick={this.clickHandler} value='violet'>Violet</button>
+      <button onClick={this.clickHandler} value='teal'>Teal</button>
+
     </div>
     <div className="grid-size-btn, button" >
-      <button onClick={this.sizeHandler} value="0">Clear All</button>
       <button onClick={this.sizeHandler} value="25">5x5</button>
       <button onClick={this.sizeHandler} value="64">8x8</button>
       <button onClick={this.sizeHandler} value="100">10x10</button>

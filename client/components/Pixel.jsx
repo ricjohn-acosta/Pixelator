@@ -19,24 +19,9 @@ class Pixel extends React.Component {
       }
     }
   }
-  resetColor = e => {
-    e.preventDefault()
-    this.setState({
-      style: {
-        width: '50px',
-        height: '50px',
-        backgroundColor: 'white',
-        display: 'block',
-        overflow: 'hidden',
-        float: 'left',
-        borderStyle: 'solid',
-        borderWidth: '1px'
-      }
-    })
-  }
 
   render () {
-    const { id, onClick, onContextMenu } = this.props
+    const { id, onClick, onContextMenu, onMouseOver } = this.props
     const style = {
       width: '50px',
       height: '50px',
