@@ -15,8 +15,6 @@
     "build": "webpack",
     "server": "node server",
     "test": "jest --watchAll",
-    "predeploy": "run-p dev:client dev:server",
-    "deploy": "gh-pages -d run-p dev:client dev:server"
   },
   "babel": {
     "presets": [
@@ -34,13 +32,6 @@
     ]
   },
   "dependencies": {
-    "boilerplate": "^0.6.1",
-    "express": "^4.17.1",
-    "npm-run-all": "^4.1.5",
-    "react-router-dom": "^5.1.2",
-    "superagent": "^5.2.1"
-  },
-  "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
@@ -49,16 +40,23 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "gh-pages": "^2.2.0",
-    "jest": "^24.9.0",
+    "boilerplate": "^0.6.1",
     "nodemon": "^1.19.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1"
-  }, 
-  "homepage": "http://ricjohn-acosta.github.io/pixelator" 
+    "webpack-dev-server": "^3.10.1",
+    "express": "^4.17.1",
+    "npm-run-all": "^4.1.5",
+    "react-router-dom": "^5.1.2",
+    "superagent": "^5.2.1"
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest": "^24.9.0",
+
+  },
+  "homepage": "http://ricjohn-acosta.github.io/Pixelator"
 }
