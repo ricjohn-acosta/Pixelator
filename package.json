@@ -14,7 +14,7 @@
     "start": "run-s build server",
     "build": "webpack",
     "server": "node server",
-    "test": "jest --watchAll",
+    "test": "jest --watchAll"
   },
   "babel": {
     "presets": [
@@ -56,7 +56,6 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^24.9.0"
-
   },
   "homepage": "http://ricjohn-acosta.github.io/Pixelator"
 }
