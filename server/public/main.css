@@ -1,0 +1,80 @@
+.main-div {
+
+  display: grid;
+  grid-template-columns: 0.7fr 2fr 0.7fr;
+
+}
+
+.middle-text {
+
+  text-align: center;
+
+}
+
+.pic-sizer {
+
+  max-width: 60px;
+
+}
+
+.display-box {
+  margin: auto;
+  max-width: 420px;
+  max-height: 420px;
+
+}
+
+.display-box5 {
+  margin: auto;
+  max-width: 270px;
+  max-height: 270px;
+
+}
+
+.display-box10 {
+  margin: auto;
+  max-width: 550px;
+  max-height: 550px;
+
+}
+
+.button {
+  margin: 20px;
+  text-align: center;
+}
+
+.main-screen-max {
+
+  margin: auto;
+  max-width: 520px;
+
+}
+
+.heading-text {
+  font-family: hydrophilia-iced, sans-serif;
+  font-size: 40px;
+}
+
+.body-text {
+  font-family:  source-sans-pro, sans-serif;
+  font-size: 20px;
+
+}
+
+/* .btn {
+  position: fixed;
+  top: 51%;
+  left: 36%;
+  width:4%;
+}
+
+.btn-outline-red {
+  border-radius: 200px;
+  background-color: red;
+  color: white;
+  border-color: red; */
+
+.left-move {
+  margin:auto;
+  margin-left: 33%;
+}
